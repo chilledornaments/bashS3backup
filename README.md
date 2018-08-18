@@ -18,7 +18,9 @@ Run `aws configure` and provide the keys you generated.
 
 ## Variables
 `bucket` is the S3 bucket you're uploading to. 
+
 `twilio_acct_sid` is, well, your Twilio account SID. 
+
 `auth_token` is your Twilio auth token.
 
 ## To and From Numbers
