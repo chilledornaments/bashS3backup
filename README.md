@@ -10,11 +10,15 @@ Create an S3 bucket.
 
 Create a programmatic access IAM user that has permissions to write to just that bucket. Copy the access and secret keys.
 
-Create a bucket access policy that allows just that user to putObject on bucket/*. 
+Create a bucket access policy that allows just that user to `putObject` on `$bucket/*`. 
 
 Download and install the AWS CLI. 
 
 Run `aws configure` and provide the keys you generated. 
+
+Set up a Twilio account. It's free. Twilio covers your first $15. A U.S. line costs $1/month and an SMS is dirt cheap.
+
+Grab your Twilio Account SID and Auth Token. Plug them into the script. 
 
 ## Variables
 `bucket` is the S3 bucket you're uploading to. 
@@ -22,6 +26,8 @@ Run `aws configure` and provide the keys you generated.
 `twilio_acct_sid` is, well, your Twilio account SID. 
 
 `auth_token` is your Twilio auth token.
+
+`sms` isn't required. It's an example of how you would set a variable message body. Bash doesn't expand single-quoted variables, so the cURL request has to be double quoted.
 
 ## To and From Numbers
 Fill these in on your own. You'll need to preface them with `+` and the country code (i.e. +11231231234)
